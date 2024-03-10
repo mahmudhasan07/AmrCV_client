@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import "./Login.css"
 import { NavLink } from "react-router-dom";
 
 
 const LogIn = () => {
+    const data = useContext()
+    console.log(data);
     const [hidden, sethidden] = useState("password");
 
     const handleLogin = (e) => {
