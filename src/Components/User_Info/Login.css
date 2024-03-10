@@ -1,0 +1,25 @@
+#Button {
+    background: linear-gradient(to right, #C2FBC1, #F2FE9B);
+    position: relative;
+}
+
+#Button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    z-index: 1;
+    height: inherit;
+    border-radius: inherit;
+    z-index: 0;
+    background: linear-gradient(to right, #C2FBC1, #F2FE9B);
+    transition: all 0.475s;
+}
+
+#Button:hover::before {
+    transform: scaleX(1);
+    z-index: inherit;
+}

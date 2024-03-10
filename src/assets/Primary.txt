@@ -1,1 +1,2 @@
 btn_color = #C2FBC1, #F2FE9B
+text_color = #38B453
