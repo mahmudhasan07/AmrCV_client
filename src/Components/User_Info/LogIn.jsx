@@ -2,10 +2,11 @@ import { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import "./Login.css"
 import { NavLink } from "react-router-dom";
+import { Context } from "../ContextAPI/ContextAPI";
 
 
 const LogIn = () => {
-    const data = useContext()
+    const data = useContext(Context)
     console.log(data);
     const [hidden, sethidden] = useState("password");
 
