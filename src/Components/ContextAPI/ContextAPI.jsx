@@ -6,36 +6,39 @@ import app from '../User_Info/Firebase.config';
 export const Context = createContext()
 const ContextAPI = ({ children }) => {
     const [loading, setloading] = useState(true);
-    const [user, setuser] = useState();
+    const [user, setuser] = useState(null);
 
     const auth = getAuth(app)
 
     const userSign = (email, password) => {
-        setloading(false)
+        setloading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
     const userLogin = (email, password) => {
-        setloading(false)
+        setloading(true)
         return signInWithEmailAndPassword(auth, email, password)
 
     }
 
     const updateUser = (name, photo) => {
-        setloading(false)
+        setloading(true)
         return updateProfile(auth.currentUser, {
             displayName: name, photoURL: photo
         })
     }
     const userLogOut = () => {
+        setloading(true)
         return signOut(auth)
     }
 
     useEffect(() => {
         onAuthStateChanged(auth, (customer) => {
-            if (customer.email) {
+            setloading(false)
+            setuser(customer)
+            if (customer?.email) {
                 console.log(customer.email);
-                setuser(customer)
+                
             }
         })
     }, [auth]);

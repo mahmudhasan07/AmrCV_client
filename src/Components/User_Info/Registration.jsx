@@ -27,25 +27,29 @@ const Registration = () => {
                 }
             })
             .then(res=>{
-                console.log(res);
+                // console.log(res);
+                const img = res?.data?.data?.display_url
+                console.log(img);
+                userSign(email, password1)
+                .then(res => {
+                    console.log(res);
+                    updateUser(name, img)
+                        .then(res => {
+                            console.log(res);
+                            userLogout()
+                        })
+                        .catch(error => {
+                            console.log(error);
+                        })
+                })
+                .catch(error => {
+                    console.log(error.message);
+                })
             })
             .catch(error=>{
                 console.log(error);
             })
-            // userSign(email, password1)
-            //     .then(res => {
-            //         console.log(res);
-            //         updateUser(name, photo)
-            //             .then(res => {
-            //                 console.log(res);
-            //             })
-            //             .catch(error => {
-            //                 console.log(error);
-            //             })
-            //     })
-            //     .catch(error => {
-            //         console.log(error.message);
-            //     })
+            
             setunmatch("")
         } else {
             setunmatch("Your password doesn't match")
@@ -57,7 +61,7 @@ const Registration = () => {
             <div className="bg-white w-1/3 items-center border-2 p-5 rounded-2xl  space-y-5">
                 {/* <button className="btn bg-white border-2 border-black rounded-2xl"><FcGoogle className="text-3xl"></FcGoogle> Join with Google</button> */}
                 {/* <div className="divider">OR</div> */}
-                <h1 className='text-2xl font-bold text-[#38B453]'>Registration Here to Get LogIn</h1>
+                <h1 className='text-3xl mb-5 text-center font-bold text-[#38B453]'>Registration Here to Get LogIn</h1>
                 <div>
                     <form onSubmit={handleRegistration} action="" className="space-y-5 mx-auto w-fit">
                         <input type="text" name='name' className="w-72 rounded-xl border-2 p-2 border-black" placeholder="Enter Your Name" required /> <br />
@@ -76,7 +80,7 @@ const Registration = () => {
                             <p className='text-red-800'>{unmatch}</p>
                         </div>
                         <div className='text-center'>
-                            <button id="Button" className="btn w-2/3 text-lg"><span className='z-50'>Sign Up</span></button>
+                            <button id="Button" className="btn font-bold w-2/3 text-lg"><span className='z-50'>Sign Up</span></button>
                         </div>
                     </form>
                 </div>
