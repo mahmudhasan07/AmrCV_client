@@ -7,12 +7,19 @@ import Home from './Components/Home/Home.jsx'
 import LogIn from './Components/User_Info/LogIn.jsx'
 import Registration from './Components/User_Info/Registration.jsx'
 import ContextAPI from './Components/ContextAPI/ContextAPI.jsx'
+import DashBoard from './Components/DashBoard/DashBoard.jsx'
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App></App>
+    element: <App></App>,
+    children:[
+      {
+        path : "/:id",
+        element : <DashBoard></DashBoard>
+      }
+    ]
   },
   {
     path: "/login",

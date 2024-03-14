@@ -6,7 +6,7 @@ import { Context } from "../ContextAPI/ContextAPI";
 
 
 const LogIn = () => {
-    const {userLogin} = useContext(Context)
+    const {userLogin, userGoogleLogIn} = useContext(Context)
     // console.log(data);
     const [hidden, sethidden] = useState("password");
     const navigate =  useNavigate()
@@ -26,11 +26,21 @@ const LogIn = () => {
         })
 
     }
+
+    const handlegoogleLogin =()=>{
+        userGoogleLogIn()
+        .then(res=>{
+            navigate("/")
+        })
+        .catch(err=>{
+            console.log(err);
+        })
+    }
     return (
         <section className="h-screen bg-[#FDF6EB] flex justify-center items-center">
             {/* <h1>LogIn </h1> */}
             <div className="bg-white w-1/3 items-center border-2 p-5 rounded-2xl text-center space-y-5">
-                <button className="btn bg-white border-2 border-black rounded-2xl"><FcGoogle className="text-3xl"></FcGoogle> Join with Google</button>
+                <button onClick={handlegoogleLogin} className="btn bg-white border-2 border-black rounded-2xl"><FcGoogle className="text-3xl"></FcGoogle> Join with Google</button>
                 <div className="divider">OR</div>
                 <div>
                     <form action="" onSubmit={handleLogin} className="space-y-5">
