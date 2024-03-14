@@ -1,12 +1,15 @@
 import React, { useContext, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Context } from '../ContextAPI/ContextAPI';
+import axios from 'axios';
 
 const Registration = () => {
     const { userSign, userLogout, updateUser } = useContext(Context)
     const [hidden, sethidden] = useState("password");
     const [hidden1, sethidden1] = useState("password");
     const [unmatch, setunmatch] = useState();
+
+    console.log(import.meta.env.VITE_IMAGE_API);
 
     const handleRegistration = (e) => {
         e.preventDefault()
@@ -18,7 +21,17 @@ const Registration = () => {
         const image = from.image.files[0]
         console.log(image);
         if (password1 == password2) {
-            
+            axios.post(`https://api.imgbb.com/1/upload?key=${import.meta.env.VITE_IMAGE_API}`, {image}, {
+                headers: {
+                    'content-type': 'multipart/form-data'
+                }
+            })
+            .then(res=>{
+                console.log(res);
+            })
+            .catch(error=>{
+                console.log(error);
+            })
             // userSign(email, password1)
             //     .then(res => {
             //         console.log(res);

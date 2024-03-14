@@ -7,7 +7,7 @@ import { Context } from "../ContextAPI/ContextAPI";
 
 const LogIn = () => {
     const data = useContext(Context)
-    console.log(data);
+    // console.log(data);
     const [hidden, sethidden] = useState("password");
 
     const handleLogin = (e) => {
