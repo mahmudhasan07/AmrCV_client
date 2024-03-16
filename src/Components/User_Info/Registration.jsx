@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Context } from '../ContextAPI/ContextAPI';
+import { Bounce, ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 
 const Registration = () => {
@@ -21,42 +23,70 @@ const Registration = () => {
         const image = from.image.files[0]
         console.log(image);
         if (password1 == password2) {
-            axios.post(`https://api.imgbb.com/1/upload?key=${import.meta.env.VITE_IMAGE_API}`, {image}, {
+            axios.post(`https://api.imgbb.com/1/upload?key=${import.meta.env.VITE_IMAGE_API}`, { image }, {
                 headers: {
                     'content-type': 'multipart/form-data'
                 }
             })
-            .then(res=>{
-                // console.log(res);
-                const img = res?.data?.data?.display_url
-                console.log(img);
-                userSign(email, password1)
                 .then(res => {
-                    console.log(res);
-                    updateUser(name, img)
+                    // console.log(res);
+                    const img = res?.data?.data?.display_url
+                    console.log(img);
+                    userSign(email, password1)
                         .then(res => {
                             console.log(res);
-                            userLogout()
+                            updateUser(name, img)
+                                .then(res => {
+                                    console.log("register");
+                                    toast('Registered Successfully', {
+                                        position: "top-right",
+                                        autoClose: 5000,
+                                        hideProgressBar: false,
+                                        closeOnClick: true,
+                                        pauseOnHover: true,
+                                        draggable: true,
+                                        progress: undefined,
+                                        theme: "dark",
+                                        transition: Bounce,
+                                    });
+                                    userLogout()
+
+                                })
+                                .catch(error => {
+                                    console.log(error);
+                                })
                         })
                         .catch(error => {
-                            console.log(error);
+                            console.log(error.message);
                         })
                 })
                 .catch(error => {
-                    console.log(error.message);
+                    console.log(error);
                 })
-            })
-            .catch(error=>{
-                console.log(error);
-            })
-            
+
             setunmatch("")
         } else {
             setunmatch("Your password doesn't match")
         }
     }
+
+    // const handletoast = ()=>{
+    //     toast('Registered Successfully', {
+    //         position: "top-right",
+    //         autoClose: 5000,
+    //         hideProgressBar: false,
+    //         closeOnClick: true,
+    //         pauseOnHover: true,
+    //         draggable: true,
+    //         progress: undefined,
+    //         theme: "dark",
+    //         transition: Bounce,
+    //     });
+    // }
+
     return (
         <section className="h-screen bg-[#FDF6EB] flex justify-center items-center">
+
             {/* <h1>LogIn </h1> */}
             <div className="bg-white w-1/3 items-center border-2 p-5 rounded-2xl  space-y-5">
                 {/* <button className="btn bg-white border-2 border-black rounded-2xl"><FcGoogle className="text-3xl"></FcGoogle> Join with Google</button> */}
@@ -88,8 +118,12 @@ const Registration = () => {
                     <h1>Already a member of our platform? </h1>
                     <NavLink to={`/login`}><button className="text-[#38B453] font-semibold">LogIn</button></NavLink>
                 </div>
-            </div>
 
+            </div>
+            {/* <div>
+                <button onClick={handletoast} className='btn'>Toast</button>
+            </div> */}
+            <ToastContainer />
         </section>
     );
 };
