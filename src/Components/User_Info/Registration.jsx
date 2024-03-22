@@ -34,7 +34,7 @@ const Registration = () => {
                     console.log(img);
                     userSign(email, password1)
                         .then(res => {
-                            console.log(res);
+                            // console.log(res);
                             updateUser(name, img)
                                 .then(res => {
                                     console.log("register");
