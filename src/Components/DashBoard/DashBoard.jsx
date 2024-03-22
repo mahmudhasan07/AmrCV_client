@@ -7,6 +7,7 @@ import { BiSolidCategoryAlt } from "react-icons/bi";
 import { MdWorkHistory } from "react-icons/md";
 import { IoShareSocial } from "react-icons/io5";
 import { MdAnalytics } from "react-icons/md";
+import "./dashboard.css";
 
 
 
@@ -24,7 +25,7 @@ const DashBoard = () => {
                         <h1>Personal Info</h1>
                     </div>
                     <div className='flex justify-around my-2'>
-                        <button className='btn border-2 border-black '><VscEye className='text-lg'></VscEye>View</button>
+                        <button className=' btn border-2 border-black'><VscEye className='text-lg my-auto'></VscEye>View</button>
                         <button className='btn border-2 border-black '><CiEdit className='text-lg'></CiEdit>Edit</button>
                     </div>
                 </div>

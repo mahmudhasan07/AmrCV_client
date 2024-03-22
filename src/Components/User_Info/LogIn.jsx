@@ -50,7 +50,7 @@ const LogIn = () => {
                             <button onClick={() => hidden == "password" ? sethidden("text") : sethidden("password")} className='-ml-12 text-[#38B453] font-semibold absolute mt-2'>Show</button>
                         </div>
                         <div className="z-50 relative">
-                            <button id="Button" className="btn w-2/3 z-50 text-lg"><span className="z-50">LogIn</span></button>
+                            <button id="Button" className="btn w-2/3 text-lg"><span className="">LogIn</span></button>
                         </div>
                     </form>
                 </div>

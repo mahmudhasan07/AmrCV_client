@@ -1,2 +1,2 @@
-btn_color = #C2FBC1, #F2FE9B
+btn_color = #C2FBC1,    
 text_color = #38B453

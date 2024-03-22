@@ -1,0 +1,32 @@
+.button {
+    background-color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.button::before {
+    content: "";
+    /* background-color: black; */
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(to right, #C2FBC1, #F2FE9B);
+    /* height: inherit; */
+    /* border: 2px solid; */
+    border-radius: 7px;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: 0%;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    transition: all .7s;
+    overflow: hidden;
+}
+
+.button:hover::before {
+    background-color: none;
+    z-index: -1;
+    transform: scaleX(1);
+    /* border: 2px solid black; */
+
+}
