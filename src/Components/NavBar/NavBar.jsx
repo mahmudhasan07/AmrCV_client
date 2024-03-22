@@ -38,7 +38,7 @@ const NavBar = () => {
 
     console.log(condition);
     return (
-        <section className="flex justify-around">
+        <section className="flex justify-around border-b-2 border-black lg:mx-10 mx-7 py-2">
             <div>
                 <h1 className="text-4xl">Amar CV</h1>
             </div>
