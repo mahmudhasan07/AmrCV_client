@@ -43,7 +43,7 @@ const NavBar = () => {
     return (
         <section className="flex justify-around border-b-2 border-black lg:mx-10 mx-7 py-2">
             <div>
-                <h1 className="text-4xl">Amar CV</h1>
+                <NavLink to={'/'}><h1 className="text-4xl">Amar CV</h1></NavLink>
             </div>
             <div>
                 {

@@ -8,11 +8,8 @@ import { MdWorkHistory } from "react-icons/md";
 import { IoShareSocial } from "react-icons/io5";
 import { MdAnalytics } from "react-icons/md";
 import "./dashboard.css";
-
-
-
-
-
+import { TbPhotoFilled } from "react-icons/tb";
+import { FaDownload } from "react-icons/fa6";
 
 
 const DashBoard = () => {
@@ -85,13 +82,24 @@ const DashBoard = () => {
             </div>
 
 
-            <div>
-                <div className='w-72 border-2 space-y-10 p-2 border-black'>
-                    <div className='text-center'>
+            <div className='w-2/3 flex mx-auto justify-around'>
+                <div className='w-80 border-2 space-y-12 rounded-2xl bg-[#FFEEEE] p-2 border-black'>
+                    <div className='text-center flex justify-center gap-2'>
+                        <TbPhotoFilled className='text-4xl'></TbPhotoFilled>
                         <h1 className='text-3xl font-bold'>Social Presence</h1>
                     </div>
                     <div className='flex justify-around gap-5'>
                         <button className='btn border-2 border-black '><VscEye className='text-lg'></VscEye>View</button>
+                        <button className='btn border-2 border-black '><CiEdit className='text-lg'></CiEdit>Edit</button>
+                    </div>
+                </div>
+                <div className='w-80 border-2 space-y-12 rounded-2xl bg-[#FFEEEE] p-2 border-black'>
+                    <div className='text-center flex justify-center gap-2'>
+                        <TbPhotoFilled className='text-4xl'></TbPhotoFilled>
+                        <h1 className='text-3xl font-bold'>Generate CV</h1>
+                    </div>
+                    <div className='flex justify-around gap-5'>
+                        <button className='btn border-2 border-black '><FaDownload className='text-lg'></FaDownload>Download</button>
                         <button className='btn border-2 border-black '><CiEdit className='text-lg'></CiEdit>Edit</button>
                     </div>
                 </div>
