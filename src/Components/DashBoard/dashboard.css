@@ -30,3 +30,7 @@
     /* border: 2px solid black; */
 
 }
+
+#dashboardCard {
+    filter: drop-shadow(3px 3px 0px);
+}

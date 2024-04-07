@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import { Context } from "../ContextAPI/ContextAPI";
 import { IoMdSettings } from "react-icons/io";
 import { IoLogOut } from "react-icons/io5";
+import env from "react-dotenv";
 
 
 const NavBar = () => {
@@ -34,6 +35,8 @@ const NavBar = () => {
         }
 
     }
+    // const role = env.VITE_API
+    // console.log(role);
 
 
     console.log(condition);
@@ -50,9 +53,9 @@ const NavBar = () => {
                             <h1 className="my-auto">Hello, {user?.displayName}</h1>
                             {/* <button id="loginBTN" className="btn font-semibold" onClick={handlelogout}>Log Out</button>  */}
                             <div className={`bg-[#F2FE9B] p-3 rounded-xl absolute top-14 text-lg font-semibold ${hide}`}>
-                                <button onClick={()=>navigate(`/${user?.metadata?.createdAt}`)} className="flex"><IoMdSettings className="text-2xl my-auto"></IoMdSettings>Account Setting</button>
+                                <button onClick={() => navigate(`/${user?.metadata?.createdAt}`)} className="flex"><IoMdSettings className="text-2xl my-auto"></IoMdSettings>Account Setting</button>
                                 <hr className="my-2 border-black" />
-                                <button onClick={()=>userLogOut()} className="flex"><IoLogOut className="text-2xl my-auto"></IoLogOut>Log Out</button>
+                                <button onClick={() => userLogOut()} className="flex"><IoLogOut className="text-2xl my-auto"></IoLogOut>Log Out</button>
 
                             </div>
                         </div>
