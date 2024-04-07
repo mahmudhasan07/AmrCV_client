@@ -1,6 +1,9 @@
 import React from 'react';
 import { TbPhotoFilled } from 'react-icons/tb';
 import { MdEmail } from "react-icons/md";
+import { CiFacebook } from 'react-icons/ci';
+import { FiYoutube } from "react-icons/fi";
+
 
 const Footer = () => {
     return (
@@ -29,7 +32,14 @@ const Footer = () => {
                 </div>
                 <div>
                     <div>
-
+                        <MdEmail className='text-3xl'></MdEmail>
+                        <h1>contact@amarcv.com</h1>
+                    </div>
+                    <div>
+                    <CiFacebook />
+                    <FiYoutube />
+                    <CiFacebook />
+                    <FiYoutube />
                     </div>
                 </div>
             </div>
