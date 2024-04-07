@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 
 const Home = () => {
     return (
-        <section>
+        <section className='h-screen'>
             <div>
             <h1>Welcome Back to our website</h1>
             </div>

@@ -14,10 +14,10 @@ import { FaDownload } from "react-icons/fa6";
 
 const DashBoard = () => {
     return (
-        <section className='text-black'>
-            <div className='space-y-4 my-10'>
-                <div id='dashboardCard' className='bg-[#F6FFA1] w-1/2 flex justify-between space-y-2 mx-auto py-2 px-8 rounded-xl border-2 border-black'>
-                    <div className='flex gap-2 text-2xl font-semibold justify-center'>
+        <section className='text-black my-10 space-y-10'>
+            <div className='space-y-4'>
+                <div   className='dashboardCard bg-[#F6FFA1] w-1/2 flex justify-between space-y-2 mx-auto py-2 px-8 rounded-xl border-2 border-black'>
+                    <div className='flex my-auto gap-2 text-2xl font-semibold justify-center'>
                         <IoPerson className='text-3xl my-auto'></IoPerson>
                         <h1>Personal Info</h1>
                     </div>
@@ -26,8 +26,8 @@ const DashBoard = () => {
                         <button className='btn border-2 border-black '><CiEdit className='text-lg'></CiEdit>Edit</button>
                     </div>
                 </div>
-                <div id='dashboardCard' className='bg-[#F6FFA1] w-1/2 flex justify-between mx-auto py-2 px-8 rounded-xl border-2 border-black'>
-                    <div className='flex text-2xl gap-2 font-semibold justify-center'>
+                <div   className='dashboardCard bg-[#F6FFA1] w-1/2 flex justify-between mx-auto py-2 px-8 rounded-xl border-2 border-black'>
+                    <div className='flex my-auto text-2xl gap-2 font-semibold justify-center'>
                         <PiNoteFill className='text-3xl my-auto'></PiNoteFill>
                         <h1>Education Info</h1>
                     </div>
@@ -36,8 +36,8 @@ const DashBoard = () => {
                         <button className='btn border-2 border-black '><CiEdit className='text-lg'></CiEdit>Edit</button>
                     </div>
                 </div>
-                <div id='dashboardCard' className='bg-[#F6FFA1] w-1/2 flex justify-between mx-auto py-2 px-8  p-3 rounded-xl border-2 border-black'>
-                    <div className='flex text-2xl gap-2 font-semibold justify-center '>
+                <div   className='dashboardCard bg-[#F6FFA1] w-1/2 flex justify-between mx-auto py-2 px-8  p-3 rounded-xl border-2 border-black'>
+                    <div className='flex my-auto text-2xl gap-2 font-semibold justify-center '>
                         <BiSolidCategoryAlt className='text-3xl my-auto'></BiSolidCategoryAlt>
                         <h1>Skill Info</h1>
                     </div>
@@ -46,8 +46,8 @@ const DashBoard = () => {
                         <button className='btn border-2 border-black '><CiEdit className='text-lg'></CiEdit>Edit</button>
                     </div>
                 </div>
-                <div id='dashboardCard' className='bg-[#F6FFA1] w-1/2 flex justify-between mx-auto py-2 px-8 rounded-xl border-2 border-black'>
-                    <div className='flex text-2xl gap-2 font-semibold justify-center'>
+                <div   className='dashboardCard bg-[#F6FFA1] w-1/2 flex justify-between mx-auto py-2 px-8 rounded-xl border-2 border-black'>
+                    <div className='flex my-auto text-2xl gap-2 font-semibold justify-center'>
                         <MdWorkHistory className='text-3xl my-auto'></MdWorkHistory>
                         <h1>Work Experience</h1>
                     </div>
@@ -59,18 +59,18 @@ const DashBoard = () => {
 
 
 
-                <div id='dashboardCard' className='bg-[#F6FFA1] w-1/2 flex justify-between mx-auto py-2 px-8 rounded-xl border-2 border-black'>
-                    <div className='flex text-2xl gap-2 font-semibold justify-center'>
-                        <IoShareSocial className='text-3xl my-auto'></IoShareSocial>
-                        <h1>Social Presence</h1>
+                <div   className='dashboardCard bg-[#F6FFA1] w-1/2 flex justify-between mx-auto py-2 px-8 rounded-xl border-2 border-black'>
+                    <div className='flex my-auto text-2xl gap-2 font-semibold justify-center'>
+                        <IoShareSocial className='text-3xl'></IoShareSocial>
+                        <h1 className=''>Social Presence</h1>
                     </div>
                     <div className='flex justify-around gap-5'>
                         <button className='btn border-2 border-black '><VscEye className='text-lg'></VscEye>View</button>
                         <button className='btn border-2 border-black '><CiEdit className='text-lg'></CiEdit>Edit</button>
                     </div>
                 </div>
-                <div id='dashboardCard' className='bg-[#F6FFA1] w-1/2 flex justify-between mx-auto py-2 px-8 rounded-xl border-2 border-black'>
-                    <div className='flex text-2xl gap-2 font-semibold justify-center'>
+                <div   className='dashboardCard bg-[#F6FFA1] w-1/2 flex justify-between mx-auto py-2 px-8 rounded-xl border-2 border-black'>
+                    <div className='flex my-auto text-2xl gap-2 font-semibold justify-center'>
                         <MdAnalytics className='text-3xl my-auto'></MdAnalytics>
                         <h1>Analytics</h1>
                     </div>
@@ -83,17 +83,17 @@ const DashBoard = () => {
 
 
             <div className='w-2/3 flex mx-auto justify-around'>
-                <div className='w-80 border-2 space-y-12 rounded-2xl bg-[#FFEEEE] p-2 border-black'>
+                <div className='dashboardCard w-80 border-2 space-y-12 rounded-2xl bg-[#FFEEEE] p-2 border-black'>
                     <div className='text-center flex justify-center gap-2'>
                         <TbPhotoFilled className='text-4xl'></TbPhotoFilled>
-                        <h1 className='text-3xl font-bold'>Social Presence</h1>
+                        <h1 className='text-3xl font-bold '>Social Presence</h1>
                     </div>
                     <div className='flex justify-around gap-5'>
                         <button className='btn border-2 border-black '><VscEye className='text-lg'></VscEye>View</button>
                         <button className='btn border-2 border-black '><CiEdit className='text-lg'></CiEdit>Edit</button>
                     </div>
                 </div>
-                <div className='w-80 border-2 space-y-12 rounded-2xl bg-[#FFEEEE] p-2 border-black'>
+                <div className='dashboardCard w-80 border-2 space-y-12 rounded-2xl bg-[#FFEEEE] p-2 border-black'>
                     <div className='text-center flex justify-center gap-2'>
                         <TbPhotoFilled className='text-4xl'></TbPhotoFilled>
                         <h1 className='text-3xl font-bold'>Generate CV</h1>

@@ -52,7 +52,7 @@ const NavBar = () => {
                             <img onClick={handleUser} src={user?.photoURL} alt="" className="w-12 cursor-pointer h-12 rounded-full border-2 border-black object-cover" />
                             <h1 className="my-auto">Hello, {user?.displayName}</h1>
                             {/* <button id="loginBTN" className="btn font-semibold" onClick={handlelogout}>Log Out</button>  */}
-                            <div className={`bg-[#F2FE9B] p-3 rounded-xl absolute top-14 text-lg font-semibold ${hide}`}>
+                            <div className={`bg-[#F2FE9B] p-3 rounded-xl absolute top-14 z-50 text-lg font-semibold ${hide}`}>
                                 <button onClick={() => navigate(`/${user?.metadata?.createdAt}`)} className="flex"><IoMdSettings className="text-2xl my-auto"></IoMdSettings>Account Setting</button>
                                 <hr className="my-2 border-black" />
                                 <button onClick={() => userLogOut()} className="flex"><IoLogOut className="text-2xl my-auto"></IoLogOut>Log Out</button>
