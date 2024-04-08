@@ -11,6 +11,7 @@ import "./dashboard.css";
 import { TbPhotoFilled } from "react-icons/tb";
 import { FaDownload } from "react-icons/fa6";
 import BasicInfo from './BasicInfo/BasicInfo';
+import Education from './Education/Education';
 
 
 const DashBoard = () => {
@@ -37,9 +38,13 @@ const DashBoard = () => {
                         <h1>Education Info</h1>
                     </div>
                     <div className='flex justify-around gap-5'>
-                        <button className='btn border-2 border-black '><VscEye className='text-lg'></VscEye>View</button>
-                        <button className='btn border-2 border-black '><CiEdit className='text-lg'></CiEdit>Edit</button>
+                        <button  className='btn border-2 border-black '><VscEye className='text-lg'></VscEye>View</button>
+                        <button onClick={() => document.getElementById("modal2").showModal()} className='btn border-2 border-black '><CiEdit className='text-lg'></CiEdit>Edit</button>
                     </div>
+                    {/* Educational Modal */}
+                    <dialog id='modal2'>
+                        <Education></Education>
+                    </dialog>
                 </div>
                 <div className='dashboardCard bg-[#F6FFA1] w-1/2 flex justify-between mx-auto py-2 px-8  p-3 rounded-xl border-2 border-black'>
                     <div className='flex my-auto text-2xl gap-2 font-semibold justify-center '>

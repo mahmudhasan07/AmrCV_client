@@ -28,7 +28,7 @@ const BasicInfo = () => {
             <form onSubmit={handleBasicInfo} action="" className='text-lg'>
                 <div>
                     <label htmlFor="" className='font-bold'>Enter Your Name</label> <br />
-                    <input name='' type="text" className='w-96 border-2 rounded-2xl p-1 border-black ' /> <br />
+                    <input name='' type="text" className='w-96 border-2 rounded-2xl p-1 border-black ' />
                 </div>
                 <div>
                     <label htmlFor="" className='font-bold'>Enter Your email</label> <br />
