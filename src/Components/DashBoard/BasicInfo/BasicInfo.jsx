@@ -13,16 +13,16 @@ const BasicInfo = () => {
                 </div>
                 <div>
                     <label htmlFor="">Enter Your email</label> <br />
-                    <input type="text" className='w-80 border-2 rounded-2xl p-1  border-black' />
+                    <input type="text" className='w-96 border-2 rounded-2xl p-1  border-black' />
                 </div>
                 <div>
                     <label htmlFor="">Enter Your Address</label> <br />
-                    <input type="text" className='w-80 border-2 rounded-2xl p-1 border-black' />
+                    <input type="text" className='w-96 border-2 rounded-2xl p-1 border-black' />
                 </div>
                 <div>
                     <label htmlFor="">Upload Your Image</label>
                     <img src={image} className='w-40 mx-auto' alt="" />
-                    <input type="file" className='w-80 rounded-2xl p-1 ' />
+                    <input type="file" className='w-96 rounded-2xl p-1 ' />
                 </div>
 
             </form>
