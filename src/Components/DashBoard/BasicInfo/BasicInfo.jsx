@@ -13,9 +13,15 @@ const BasicInfo = () => {
         setimage(localHost)
     }
 
-    const handleBasicInfo=(e)=>{
+    const handleBasicInfo = (e) => {
         e.preventDefault()
         const from = e.target
+        const name = from.name.value
+        const email = from.email.value
+        const address = from.address.value
+        const occupation = from.occupation.value
+        const data = {name, email,address,occupation}
+
         // const 
     }
 
@@ -28,19 +34,19 @@ const BasicInfo = () => {
             <form onSubmit={handleBasicInfo} action="" className='text-lg'>
                 <div>
                     <label htmlFor="" className='font-bold'>Enter Your Name</label> <br />
-                    <input name='' type="text" className='w-96 border-2 rounded-2xl p-1 border-black ' />
+                    <input name='name' type="text" className='w-96 border-2 rounded-2xl p-1 border-black ' />
                 </div>
                 <div>
                     <label htmlFor="" className='font-bold'>Enter Your email</label> <br />
-                    <input type="text" className='w-96 border-2 rounded-2xl p-1  border-black' />
+                    <input type="email" name='email' className='w-96 border-2 rounded-2xl p-1  border-black' />
                 </div>
                 <div>
                     <label htmlFor="" className='font-bold'>Enter Your Address</label> <br />
-                    <input type="text" className='w-96 border-2 rounded-2xl p-1 border-black' />
+                    <input type="text" name='address' className='w-96 border-2 rounded-2xl p-1 border-black' />
                 </div>
                 <div>
                     <label htmlFor="" className='font-bold'>What you are doing now?</label> <br />
-                    <input type="text" className='w-96 border-2 rounded-2xl p-1 border-black' />
+                    <input type="text" name='occupation' className='w-96 border-2 rounded-2xl p-1 border-black' />
                 </div>
                 <div>
                     <label htmlFor="" className='font-bold'>Upload Your Image</label>
