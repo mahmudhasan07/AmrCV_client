@@ -20,11 +20,11 @@ const BasicInfo = () => {
     }
 
     return (
-        <section className='px-16 py-5 '>
+        <section className='px-16 my-3 '>
             <div className='flex justify-end font-extrabold text-xl'>
                 <button onClick={() => document.getElementById("modal1").close()} className=''>X</button>
             </div>
-            <h1 className='text-3xl font-semibold my-5'>Enter Your Basic Information</h1>
+            <h1 className='text-3xl font-semibold my-3'>Enter Your Basic Information</h1>
             <form onSubmit={handleBasicInfo} action="" className='text-lg'>
                 <div>
                     <label htmlFor="" className='font-bold'>Enter Your Name</label> <br />
