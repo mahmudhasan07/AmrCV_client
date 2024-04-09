@@ -38,10 +38,10 @@ const Education = () => {
                     <textarea name="" id="" className='border-2 border-black w-full rounded-2xl p-2'  rows="4"></textarea>
                 </div>
             </div>
-            <div id='hsc'>
-                <h1 className='text-xl font-semibold my-2'>HSC</h1>
+            <div id='ssc'>
+                <h1 className='text-xl font-semibold my-2'>SSC</h1>
                 <div>
-                    <label htmlFor="" className='font-bold'>Enter Your College Name</label> <br />
+                    <label htmlFor="" className='font-bold'>Enter Your School Name</label> <br />
                     <input name='' type="text" className='w-96 border-2 rounded-2xl p-1 border-black ' /> <br />
                     <label htmlFor="" className='font-bold'>Enter Your Background</label> <br />
                     <input name='' type="text" className='w-96 border-2 rounded-2xl p-1 border-black ' /> <br />
